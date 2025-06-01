@@ -12,7 +12,6 @@ export async function POST({ request }: RequestEvent) {
 
   const result = streamText({
     model: gateway(modelId),
-    system: "You are a software engineer exploring Generative AI.",
     messages: convertToModelMessages(messages),
     onError: (error) => {
       console.error(error);
